@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Lesley Chacha</title>
+  <meta name="description" content="Let's talk about your web design project. Book a free strategy call or reach Lesley Chacha on WhatsApp: +254 796 420 241." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+<div id="loader"><p class="loader-logo">Lesley <span>Chacha</span></p><div class="loader-bar"></div></div>
+<div id="cursor"></div><div id="cursor-ring"></div>
+
+<a class="wa-float" href="https://wa.me/254796420241" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<nav class="mobile-nav">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <a href="portfolio.html">Work</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+</nav>
+
+<header class="nav" id="nav">
+  <a href="index.html" class="nav-logo">Lesley <span>Chacha</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li><li><a href="portfolio.html">Work</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
+    <a href="contact.html" class="btn-nav">Let's Talk</a>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- Contact Hero -->
+<section class="contact-hero">
+  <div class="contact-hero-inner">
+    <div class="contact-hero-text">
+      <p class="section-label reveal">Don't be shy!</p>
+      <h1 class="contact-title reveal delay-1">
+        Let's make<br>
+        something<br>
+        <em class="contact-title-em">great</em>
+        <span class="contact-wave" aria-hidden="true">👋</span>
+      </h1>
+      <p class="contact-sub reveal delay-2">Pick your vibe — send a form, drop a WhatsApp, or just book a call. I promise I won't bite and I actually read every message.</p>
+    </div>
+
+    <div class="contact-bubbles reveal delay-3">
+      <div class="bubble bubble-1 glass">
+        <span class="bubble-icon">⚡</span>
+        <span>Usually replies in 2 hours</span>
+      </div>
+      <div class="bubble bubble-2 glass">
+        <span class="bubble-icon">☕</span>
+        <span>Free discovery call — no sales pitch</span>
+      </div>
+      <div class="bubble bubble-3 glass">
+        <span class="bubble-icon">🇰🇪</span>
+        <span>Based in Nairobi, Kenya</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Body -->
+<section class="section">
+  <div class="section-inner">
+    <div class="contact-grid">
+
+      <!-- Form -->
+      <div class="contact-form-col reveal-left">
+        <div class="form-header">
+          <p class="section-label">The Form Route</p>
+          <h2 class="section-title" style="font-size:clamp(1.8rem,3vw,2.8rem)">Tell me <em>everything</em></h2>
+        </div>
+
+        <form id="contact-form" class="contact-form glass card" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Wanjiku" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" placeholder="+254 7XX XXX XXX" />
+          </div>
+
+          <div class="form-group">
+            <label for="service">What are you after?</label>
+            <select id="service" name="service">
+              <option value="">— Pick a service —</option>
+              <option value="launch">Launch Package (KSh 15,000)</option>
+              <option value="growth">Growth Package (KSh 35,000)</option>
+              <option value="scale">Scale Package (KSh 60,000+)</option>
+              <option value="brand">Brand Identity (custom)</option>
+              <option value="strategy">Digital Strategy (custom)</option>
+              <option value="audit">Free Website Audit</option>
+              <option value="other">Something else entirely</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="budget">Rough timeline</label>
+            <select id="budget" name="budget">
+              <option value="">— How soon do you need it? —</option>
+              <option value="asap">As soon as possible</option>
+              <option value="2weeks">Within 2 weeks</option>
+              <option value="month">Within a month</option>
+              <option value="flexible">I'm flexible, quality over speed</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell me about your project</label>
+            <textarea id="message" name="message" placeholder="What do you do? Who's your audience? What's the goal? What have you tried? The more detail, the better." rows="6" required></textarea>
+          </div>
+
+          <div class="form-group form-check">
+            <label class="check-label">
+              <input type="checkbox" required />
+              I'm happy for Lesley Chacha to reach me by email or WhatsApp about this enquiry.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:18px;">
+            Send My Message 🚀
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="contact-info-col reveal-right">
+        <div class="form-header">
+          <p class="section-label">Other Ways to Reach Me</p>
+          <h2 class="section-title" style="font-size:clamp(1.8rem,3vw,2.8rem)">Prefer the<br><em>direct route?</em></h2>
+        </div>
+
+        <div class="contact-cards">
+          <a href="https://wa.me/254796420241" target="_blank" class="contact-card glass card">
+            <div class="cc-icon" style="background:rgba(37,211,102,0.1);border-color:rgba(37,211,102,0.3)">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div>
+              <strong>WhatsApp</strong>
+              <span>+254 796 420 241</span>
+              <p>Fastest way to reach me — I'm usually on here</p>
+            </div>
+            <span class="cc-arrow">→</span>
+          </a>
+
+          <a href="mailto:chachalesley18@gmail.com" class="contact-card glass card">
+            <div class="cc-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <strong>Email</strong>
+              <span>chachalesley18@gmail.com</span>
+              <p>For longer briefs and project documents</p>
+            </div>
+            <span class="cc-arrow">→</span>
+          </a>
+
+          <!-- Booking Calendar Placeholder -->
+          <div class="booking-card glass card">
+            <p class="section-label" style="margin-bottom:12px">Strategy Call</p>
+            <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:300;margin-bottom:8px">Book a <em>free 30-min call</em></h3>
+            <p style="font-size:0.85rem;color:var(--text2);margin-bottom:20px;line-height:1.7">No commitment. We'll talk through your project and figure out what you actually need.</p>
+            <!-- Replace href with your actual Calendly link -->
+            <a href="https://calendly.com" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center">
+              View Available Slots
+            </a>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section mt-8">
+          <p class="section-label" style="margin-bottom:20px">Common Questions</p>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-q">How long does a website take? <span>+</span></button>
+              <div class="faq-a">Most projects are done in 3–10 days depending on scope. Rush delivery is possible — just ask.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">What do I need to provide? <span>+</span></button>
+              <div class="faq-a">Your content (text and images), your logo if you have one, and your vision. I handle the rest — including writing copy if you need it.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">Do you offer payment plans? <span>+</span></button>
+              <div class="faq-a">Yes — I typically do 50% upfront and 50% on completion. We can discuss options for larger projects.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">Can you host my site? <span>+</span></button>
+              <div class="faq-a">I'll help you set up hosting (GitHub Pages, Netlify, or a custom host), and you'll own everything outright.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><h3>Lesley <span>Chacha</span></h3><p>Web designer, brand strategist, and creative problem-solver based in Nairobi.</p><div class="footer-socials mt-8"><a href="#" aria-label="LinkedIn"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div></div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Static Web Pages</a></li><li><a href="services.html">Brand Identity</a></li><li><a href="services.html">Digital Strategy</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="https://wa.me/254796420241">WhatsApp</a></li><li><a href="contact.html">Book a Call</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Lesley Chacha. Crafted with intention in Nairobi, Kenya.</p>
+      <p class="font-mono" style="font-size:0.7rem;color:var(--gold)">Simple · Sustainable · Inclusive</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // FAQ Accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>

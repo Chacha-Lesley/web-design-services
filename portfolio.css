@@ -1,0 +1,131 @@
+/* ============================================
+   LESLEY CHACHA — Portfolio Page Styles
+   ============================================ */
+
+.page-hero { min-height:50vh; display:flex; align-items:flex-end; padding:160px 48px 80px; position:relative; overflow:hidden; }
+.page-hero::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:linear-gradient(to right, transparent, var(--gold-dim), transparent); }
+.page-hero-inner { max-width:1280px; margin:0 auto; width:100%; position:relative; z-index:1; }
+.page-hero-title { font-family:var(--font-display); font-size:clamp(3rem,7vw,6.5rem); font-weight:300; line-height:1.05; letter-spacing:-0.02em; margin-top:16px; }
+.page-hero-title em { color:var(--gold); font-style:italic; }
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 9px 22px;
+  border-radius: var(--radius-xl);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--border2);
+  color: var(--text2);
+  background: transparent;
+  transition: all 0.25s;
+  font-family: var(--font-body);
+}
+
+.filter-btn:hover { border-color: var(--border); color: var(--text); }
+.filter-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.06); }
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.pf-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border2);
+  background: var(--bg2);
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s, border-color 0.4s;
+}
+
+.pf-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-gold), var(--shadow-card);
+  border-color: var(--border);
+}
+
+.pf-link { display: block; }
+
+.pf-img {
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pf-label {
+  font-size: 1.6rem;
+  color: rgba(255,255,255,0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.pf-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s;
+  backdrop-filter: blur(4px);
+}
+
+.pf-card:hover .pf-overlay { opacity: 1; }
+
+.pf-view {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.pf-info {
+  padding: 24px 28px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pf-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.pf-info p {
+  font-size: 0.78rem;
+  color: var(--text2);
+  letter-spacing: 0.04em;
+}
+
+.pf-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .page-hero { padding: 120px 24px 60px; }
+}

@@ -1,0 +1,77 @@
+/* ============================================
+   LESLEY CHACHA — Services Page Styles
+   ============================================ */
+
+.page-hero { min-height:50vh; display:flex; align-items:flex-end; padding:160px 48px 80px; position:relative; overflow:hidden; }
+.page-hero::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:linear-gradient(to right, transparent, var(--gold-dim), transparent); }
+.page-hero-inner { max-width:1280px; margin:0 auto; width:100%; position:relative; z-index:1; }
+.page-hero-title { font-family:var(--font-display); font-size:clamp(3rem,7vw,6.5rem); font-weight:300; line-height:1.05; letter-spacing:-0.02em; margin-top:16px; }
+.page-hero-title em { color:var(--gold); font-style:italic; }
+
+/* Service Detail Cards */
+.service-detail { display:grid; grid-template-columns:1.4fr 1fr; gap:60px; align-items:center; padding:56px; margin-bottom:24px; }
+.sd-left h2 { font-family:var(--font-display); font-size:2.4rem; font-weight:300; margin:16px 0; }
+.sd-left p { color:var(--text2); line-height:1.8; margin-bottom:24px; }
+.sd-features { list-style:none; display:flex; flex-direction:column; gap:10px; margin-bottom:24px; }
+.sd-features li { display:flex; align-items:center; gap:10px; font-size:0.9rem; color:var(--text2); }
+.sd-features li::before { content:'→'; color:var(--gold); font-size:0.8rem; }
+.sd-price { font-family:var(--font-mono); font-size:0.85rem; color:var(--gold); letter-spacing:0.05em; }
+.sd-price strong { font-size:1.1rem; }
+.sd-right { display:flex; align-items:center; justify-content:center; }
+.sd-icon-area { width:160px; height:160px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; background:rgba(201,168,76,0.04); }
+
+/* Packages */
+.packages-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.package-card { padding:40px 36px; position:relative; }
+.package-card--featured { border-color:var(--gold); background:linear-gradient(160deg, rgba(201,168,76,0.06) 0%, var(--bg2) 100%); }
+.pkg-badge { position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--black); font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; padding:5px 16px; border-radius:40px; font-weight:600; white-space:nowrap; }
+.pkg-tier { font-size:0.65rem; letter-spacing:0.2em; color:var(--gold); margin-bottom:8px; }
+.pkg-header h3 { font-family:var(--font-display); font-size:1.9rem; font-weight:300; margin-bottom:6px; }
+.pkg-tagline { font-size:0.85rem; color:var(--text2); margin-bottom:28px; }
+.pkg-price { display:flex; align-items:baseline; gap:6px; margin-bottom:32px; }
+.pkg-price span { font-family:var(--font-mono); font-size:0.8rem; color:var(--gold); }
+.pkg-price strong { font-family:var(--font-display); font-size:3rem; font-weight:600; color:var(--text); line-height:1; }
+.pkg-features { list-style:none; display:flex; flex-direction:column; gap:12px; margin-bottom:36px; }
+.pkg-features li { display:flex; align-items:center; gap:10px; font-size:0.88rem; color:var(--text2); }
+.pkg-features li span { color:var(--green-glow); font-weight:600; }
+.pkg-features li.dimmed { opacity:0.4; }
+.pkg-features li.dimmed span { color:var(--text2); }
+
+/* Calculator */
+.calculator-wrapper { padding:60px; display:grid; grid-template-columns:1fr 1.4fr; gap:60px; align-items:start; border-radius:var(--radius-lg); }
+.calc-form { display:flex; flex-direction:column; gap:20px; }
+.calc-row label { display:block; font-size:0.82rem; color:var(--text2); margin-bottom:8px; letter-spacing:0.06em; }
+.calc-row select { width:100%; padding:12px 16px; background:var(--bg); border:1px solid var(--border); border-radius:var(--radius); color:var(--text); font-family:var(--font-body); font-size:0.9rem; outline:none; cursor:none; }
+.calc-group-label { font-size:0.7rem; letter-spacing:0.15em; color:var(--gold); text-transform:uppercase; margin-bottom:4px; }
+.calc-checkboxes { display:flex; flex-direction:column; gap:12px; }
+.calc-check { display:flex; align-items:center; gap:12px; font-size:0.88rem; color:var(--text2); cursor:none; }
+.calc-check input { accent-color:var(--gold); width:16px; height:16px; cursor:none; }
+.calc-total { display:flex; align-items:center; justify-content:space-between; padding:20px 24px; background:rgba(201,168,76,0.06); border:1px solid var(--border); border-radius:var(--radius); }
+.calc-total span:first-child { font-size:0.82rem; color:var(--text2); }
+#quote-total { font-family:var(--font-display); font-size:2rem; font-weight:400; color:var(--gold); }
+#quote-total span { font-size:1rem; }
+
+/* Process */
+.process-timeline { display:flex; align-items:flex-start; gap:0; }
+.process-step { flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; }
+.ps-num { font-family:var(--font-mono); font-size:0.7rem; color:var(--gold); letter-spacing:0.15em; width:44px; height:44px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; margin-bottom:20px; background:rgba(201,168,76,0.05); }
+.ps-content h3 { font-family:var(--font-display); font-size:1.3rem; font-weight:400; margin-bottom:8px; }
+.ps-content p { font-size:0.85rem; color:var(--text2); line-height:1.7; max-width:180px; margin:0 auto; }
+.process-connector { flex:0 0 60px; height:1px; background:linear-gradient(to right, var(--gold-dim), transparent); margin-top:22px; }
+
+/* Responsive */
+@media (max-width:1024px) {
+  .service-detail { grid-template-columns:1fr; gap:32px; }
+  .sd-right { display:none; }
+  .packages-grid { grid-template-columns:1fr; }
+  .calculator-wrapper { grid-template-columns:1fr; gap:40px; padding:40px 32px; }
+  .process-timeline { flex-direction:column; gap:24px; }
+  .process-connector { width:1px; height:24px; background:linear-gradient(to bottom, var(--gold-dim), transparent); margin:0 0 0 22px; }
+  .process-step { align-items:flex-start; text-align:left; }
+  .ps-content p { max-width:none; margin:0; }
+}
+@media (max-width:768px) {
+  .page-hero { padding:120px 24px 60px; }
+  .service-detail { padding:32px 24px; }
+  .calculator-wrapper { padding:32px 24px; }
+}

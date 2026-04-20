@@ -1,0 +1,121 @@
+/* ============================================
+   LESLEY CHACHA — Blog Page Styles
+   ============================================ */
+
+.page-hero { min-height:50vh; display:flex; align-items:flex-end; padding:160px 48px 80px; position:relative; overflow:hidden; }
+.page-hero::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:linear-gradient(to right, transparent, var(--gold-dim), transparent); }
+.page-hero-inner { max-width:1280px; margin:0 auto; width:100%; position:relative; z-index:1; }
+.page-hero-title { font-family:var(--font-display); font-size:clamp(3rem,7vw,6.5rem); font-weight:300; line-height:1.05; letter-spacing:-0.02em; margin-top:16px; }
+.page-hero-title em { color:var(--gold); font-style:italic; }
+
+.blog-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Featured Post */
+.blog-post--featured {
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.blog-post--featured .bp-img {
+  height: 360px;
+  display: flex;
+  align-items: flex-start;
+  padding: 28px;
+}
+
+.blog-post--featured .bp-content { padding: 36px 40px 40px; }
+.blog-post--featured h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 300; margin: 12px 0; line-height: 1.2; }
+.blog-post--featured h2 a { color: var(--text); transition: color 0.25s; }
+.blog-post--featured h2 a:hover { color: var(--gold); }
+.blog-post--featured p { color: var(--text2); line-height: 1.8; margin-bottom: 24px; }
+
+/* Blog Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.blog-post {
+  padding: 0;
+  overflow: hidden;
+}
+
+.bp-img {
+  height: 180px;
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  position: relative;
+}
+
+.bp-img--sm { height: 140px; }
+
+.bp-cat {
+  position: relative;
+  z-index: 1;
+}
+
+.bp-content { padding: 24px 28px 28px; }
+.bp-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+
+.blog-post h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 400; margin-bottom: 8px; line-height: 1.3; }
+.blog-post h3 a { color: var(--text); transition: color 0.25s; }
+.blog-post h3 a:hover { color: var(--gold); }
+.blog-post p { font-size: 0.85rem; color: var(--text2); line-height: 1.7; margin-bottom: 16px; }
+
+.blog-read-more {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  transition: letter-spacing 0.25s;
+}
+.blog-read-more:hover { letter-spacing: 0.14em; }
+
+/* Sidebar */
+.blog-sidebar {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-widget { padding: 28px 24px; }
+.sidebar-widget h4 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 400; margin-bottom: 14px; }
+.sidebar-widget p { font-size: 0.85rem; color: var(--text2); line-height: 1.7; }
+
+.topic-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.topic-tags a { transition: border-color 0.25s, color 0.25s; }
+.topic-tags a:hover { border-color: var(--gold); color: var(--gold); }
+
+.sidebar-form input {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.25s;
+}
+.sidebar-form input:focus { border-color: var(--gold); }
+.sidebar-form input::placeholder { color: var(--text2); }
+
+@media (max-width: 1100px) {
+  .blog-layout { grid-template-columns: 1fr; }
+  .blog-sidebar { position: static; }
+}
+@media (max-width: 768px) {
+  .blog-grid { grid-template-columns: 1fr; }
+  .page-hero { padding: 120px 24px 60px; }
+}

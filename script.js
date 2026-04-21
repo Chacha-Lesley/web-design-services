@@ -247,14 +247,45 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', e => {
       e.preventDefault();
       const btn = contactForm.querySelector('[type=submit]');
-      btn.textContent = 'Message Sent ✓';
-      btn.style.background = 'var(--green)';
-      btn.style.color = 'white';
-      setTimeout(() => {
-        btn.textContent = 'Send Message';
-        btn.style.background = '';
-        btn.style.color = '';
-      }, 3000);
+      const formData = new FormData(contactForm);
+      
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          btn.textContent = 'Message Sent ✓';
+          btn.style.background = 'var(--green)';
+          btn.style.color = 'white';
+          contactForm.reset();
+          setTimeout(() => {
+            btn.textContent = 'Send My Message';
+            btn.style.background = '';
+            btn.style.color = '';
+            btn.disabled = false;
+          }, 3000);
+        } else {
+          throw new Error('Form submission failed');
+        }
+      })
+      .catch(error => {
+        btn.textContent = 'Error sending message';
+        btn.style.background = '#d32f2f';
+        btn.style.color = 'white';
+        btn.disabled = false;
+        setTimeout(() => {
+          btn.textContent = 'Send My Message';
+          btn.style.background = '';
+          btn.style.color = '';
+        }, 3000);
+      });
     });
   }
 

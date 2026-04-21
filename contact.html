@@ -73,6 +73,15 @@
     <div class="contact-grid">
 
       <!-- Form -->
+       <form 
+            id="contact-form" 
+            class="contact-form glass card" 
+            action="https://formspree.io/f/xnjlbynj" 
+             method="POST"
+        >
+
+            <input type="hidden" name="_subject" value="New Website Enquiry from Contact Form">
+            <input type="text" name="_gotcha" style="display:none">
       <div class="contact-form-col reveal-left">
         <div class="form-header">
           <p class="section-label">The Form Route</p>
@@ -126,16 +135,16 @@
             <textarea id="message" name="message" placeholder="What do you do? Who's your audience? What's the goal? What have you tried? The more detail, the better." rows="6" required></textarea>
           </div>
 
-          <div class="form-group form-check">
-            <label class="check-label">
-              <input type="checkbox" required />
-              I'm happy for Lesley Chacha to reach me by email or WhatsApp about this enquiry.
-            </label>
-          </div>
+            <div class="form-group form-check">
+                <label class="check-label">
+                <input type="checkbox" name="consent" required />
+                I'm happy for Lesley Chacha to reach me by email or WhatsApp about this enquiry.
+                </label>
+            </div>
 
-          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:18px;">
-            Send My Message 🚀
-          </button>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:18px;">
+            Send My Message
+            </button>
         </form>
       </div>
 

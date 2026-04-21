@@ -213,7 +213,9 @@
         <h2 class="section-title" style="font-size:clamp(1.8rem,3vw,2.8rem)">Quick <em>quote calculator</em></h2>
         <p class="section-subtitle">Rough figures only — your final quote will be confirmed after a discovery call.</p>
       </div>
-      <form id="quote-calculator" class="calc-form">
+      <form id="contact-form" class="calc-form" action="https://formspree.io/f/xnjlbynj" method="POST">
+        <input type="hidden" name="_subject" value="New Website Enquiry from Quote Calculator">
+        <input type="text" name="_gotcha" style="display:none">
         <div class="calc-row">
           <label>Number of pages</label>
           <select name="pages">
@@ -225,17 +227,17 @@
         </div>
         <div class="calc-checkboxes">
           <p class="calc-group-label font-mono">Add-ons</p>
-          <label class="calc-check"><input type="checkbox" data-price="3000"> Brand Identity Package</label>
-          <label class="calc-check"><input type="checkbox" data-price="2000"> Digital Strategy Session</label>
-          <label class="calc-check"><input type="checkbox" data-price="3000"> Blog / News Section</label>
-          <label class="calc-check"><input type="checkbox" data-price="4000"> Booking Calendar Integration</label>
-          <label class="calc-check"><input type="checkbox" data-price="2000"> Social Media Kit</label>
+          <label class="calc-check"><input type="checkbox" data-price="3000" name="addons"> Brand Identity Package</label>
+          <label class="calc-check"><input type="checkbox" data-price="2000" name="addons"> Digital Strategy Session</label>
+          <label class="calc-check"><input type="checkbox" data-price="3000" name="addons"> Blog / News Section</label>
+          <label class="calc-check"><input type="checkbox" data-price="4000" name="addons"> Booking Calendar Integration</label>
+          <label class="calc-check"><input type="checkbox" data-price="2000" name="addons"> Social Media Kit</label>
         </div>
         <div class="calc-total">
           <span>Estimated total:</span>
           <span id="quote-total" class="font-display"><span>KSh</span> 12,000</span>
         </div>
-        <a href="contact.html" class="btn btn-primary">Book a Free Consultation</a>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Book a Free Consultation</button>
       </form>
     </div>
   </div>

@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ── Quote Calculator ───────────────────── */
-  const calculator = document.getElementById('quote-calculator');
+  const calculator = document.querySelector('.calc-form') || document.getElementById('quote-calculator');
   if (calculator) {
     const inputs = calculator.querySelectorAll('input[type=checkbox], select');
     const total  = calculator.querySelector('#quote-total');

@@ -291,9 +291,11 @@
         <p class="section-subtitle">Not sure why your site isn't converting? Fill in the form and I'll send you a personalised, honest audit — no strings attached.</p>
       </div>
       <div class="lm-right">
-        <form class="audit-form" id="audit-form">
-          <input type="url" placeholder="Your website URL" required />
-          <input type="email" placeholder="Your email address" required />
+        <form class="audit-form" id="contact-form" action="https://formspree.io/f/xnjlbynj" method="POST">
+          <input type="hidden" name="_subject" value="New Website Enquiry from Audit Form">
+          <input type="text" name="_gotcha" style="display:none">
+          <input type="url" name="website" placeholder="Your website URL" required />
+          <input type="email" name="email" placeholder="Your email address" required />
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send Me the Free Audit</button>
         </form>
       </div>

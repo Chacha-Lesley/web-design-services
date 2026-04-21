@@ -225,12 +225,16 @@ document.addEventListener('DOMContentLoaded', () => {
     inputs.forEach(inp => inp.addEventListener('change', updateQuote));
 
     function updateQuote() {
-      let base = 15000;
+      const pagesValue = parseInt(calculator.querySelector('select[name=pages]')?.value || 1);
+      let base;
+      if (pagesValue === 1) base = 5000;        // 1-2 pages
+      else if (pagesValue <= 4) base = 12000;   // 3-4 pages
+      else if (pagesValue <= 6) base = 15000;   // 5-6 pages
+      else base = 20000;                        // 7+ pages
+      
       calculator.querySelectorAll('input[type=checkbox]:checked').forEach(cb => {
         base += parseInt(cb.dataset.price || 0);
       });
-      const pages = parseInt(calculator.querySelector('select[name=pages]')?.value || 1);
-      base += (pages - 1) * 3000;
       if (total) {
         total.innerHTML = `<span>KSh</span> ${base.toLocaleString()}`;
       }
